@@ -24,3 +24,8 @@ mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
+
+files:
+  upload:
+    path: D:/JAVA/springboot-vue第三项目工作空间30小时/myspringboot/src/main/resources/static/files/
+#    path: /home/files/
