@@ -44,14 +44,14 @@ public class UserController {
         Page<SysUser> page=new Page<>(pageNum,pageSize);
         Page<SysUser> getPage=userService.page(page,queryWrapper);
         SysUser user = TokenUtils.getCurrentUser();
-        System.out.println(user );
+        System.out.println(user);
 
         return getPage;
     }
 
     //若传来的元素没有有id就更新，否则保存
     @PostMapping("/saveOrUpdate")
-    public Result save(@RequestBody SysUser user){
+    public Result save( SysUser user){
         System.out.println("执行save操作");
         boolean flag=false;
         flag=userService.saveOrUpdate(user);
